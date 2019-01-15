@@ -4,7 +4,7 @@
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
 
-        <title>Example Student's HCDE 439 Physical Computing Page!</title> 
+        <title>Collin's HCDE 439 Physical Computing Page!</title>
 
         <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
 
@@ -12,12 +12,56 @@
     <body> 
 
         <div class="header">
-            <h1>Example Student's Assignment 1!</h1>
+            <h1>Assignment 1: Blink!</h1>
             <p>
-            <img src="red-panda.jpg" width=400></a>
+            <img src="blink.gif" width=400></a>
             </p>
+            <h2>Calculating resistance for LEDs</h2>
             <p>
-            Here is all the documentation for assignment 1!
+            <pre>
+<b>For red and yellow LEDs:</b>
+1.8V drop, 5V power source, 20 mA
+V = 5-1.8 = 3.2 V
+V = I x R = 3.2 = 0.02 x R
+R = 3.2/0.02 = <b>160 Ω</b>
+
+<b>For the blue LED:</b>
+3.3V drop, 5V power source, 20 mA
+V = 5-3.3 = 1.7 V
+V = I x R = 1.7 = 0.02 x R
+R = 1.7/0.02 = <b>85 Ω</b>
+
+<img src="schematic.jpeg" width=400>
+            </pre>
+
+            <h2>Arduino code snippet</h2>
+            <p>
+            <p style="font-family:courier">
+            <pre>
+void setup() {
+    pinMode(1, OUTPUT);     // initializes pin 1
+    pinMode(2, OUTPUT);     // initializes pin 2
+    pinMode(3, OUTPUT);     // initializes pin 3
+}
+
+void loop() {
+    digitalWrite(1, HIGH);   // turn the LED on (HIGH is the voltage level)
+    delay(500);              // wait for a second
+    digitalWrite(1, LOW);    // turn the LED off by making the voltage LOW
+    delay(500);              // wait for a second
+
+    digitalWrite(2, HIGH);   // turn the LED on (HIGH is the voltage level)
+    delay(500);              // wait for a second
+    digitalWrite(2, LOW);    // turn the LED off by making the voltage LOW
+    delay(500);              // wait for a second
+
+    digitalWrite(3, HIGH);   // turn the LED on (HIGH is the voltage level)
+    delay(500);              // wait for a second
+    digitalWrite(3, LOW);    // turn the LED off by making the voltage LOW
+    delay(500);              // wait for a second
+}
+            </pre>
+            </font-family:courier>
             </p>
         </div>
         
