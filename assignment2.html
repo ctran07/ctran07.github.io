@@ -4,7 +4,7 @@
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
 
-        <title>Example Student's HCDE 439 Physical Computing Page!</title> 
+        <title>Assignment 2: Fade!</title>
 
         <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
 
@@ -12,12 +12,41 @@
     <body> 
 
         <div class="header">
-            <h1>Example Student's Assignment 2!</h1>
+            <h1>Assignment 2: Fade!</h1>
             <p>
-            <img src="red-panda.jpg" width=400></a>
+                <img src="fade.gif" width=400></a>
             </p>
+
             <p>
-            Here is all the documentation for assignment 2!
+                This circuit fades an LED on and off with the press of a button.
+            </p>
+
+            <h2>Button and LED schematic</h2>
+            <p>
+            <img src="A2schematic.jpeg" width="400">
+                <pre>
+
+<b>For green LEDs:</b>
+1.8V drop, 5V power source, 20 mA
+V = 5-1.8 = 3.2 V
+V = I x R = 3.2 = 0.02 x R
+R = 3.2/0.02 = <b>160 Ω</b>
+                </pre>
+            I chose to use a 1K Ω resistor to limit the current flowing to the LED, much more than the 160 Ω requirement.
+                <pre>
+
+<b>For the button:</b>
+5V = 200mA x R
+5V / 0.2 A = R
+R = <b>25 Ω</b>
+                </pre>
+            I chose to use a 10K Ω resistor, as we did in class examples, even though any resistor larger than 25 Ω would have sufficed.
+            </p>
+
+            <p>
+                <h2>Code snippet</h2>
+            <img src="A2code.png" width=400>
+
             </p>
         </div>
         
