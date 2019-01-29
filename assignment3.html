@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+        <title>Assignment 3: Input Output!</title>
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head>
+    <body>
+
+        <div class="header">
+            <h1>Assignment 2: Input Output!</h1>
+            <p>
+                <img src="a3.gif" width=400></a>
+            </p>
+
+            <p>
+                This circuit dims an LED on and off based off of its read output from an LDR, and blinks another LED based off its readings.
+                When the LDR reads low light, it will blink a separate LED, and when it reads high light, it won't.
+            </p>
+
+            <h2>LDR and LED schematic</h2>
+            <p>
+            <img src="a3schematic.jpeg" width="400">
+                <pre>
+
+<b>For blue LEDs:</b>
+3.3V drop, 5V power source, 20 mA
+V = 5-3.3 = 1.7 V
+V = I x R = 1.7 = 0.02 x R
+R = 1.7/0.02 = <b>85 Ω</b>
+                </pre>
+            I chose to use a 1K Ω resistor to limit the current flowing to the LED, much more than the 85 Ω requirement.
+                <pre>
+
+<b>For the LDR:</b>
+5V = 200mA x R
+5V / 0.2 A = R
+R = <b>25 Ω</b>
+                </pre>
+            I chose to use a 10K Ω resistor, as we did in class examples, even though any resistor larger than 25 Ω would have sufficed.
+            </p>
+
+            <p>
+                <h2>Code snippet</h2>
+            <img src="a3code.png" width=400>
+
+            </p>
+        </div>
+
+    </body>
+</html>
