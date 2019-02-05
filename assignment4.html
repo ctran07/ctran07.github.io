@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+        <title>Assignment 4: High(er) voltage and transistors</title>
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head>
+    <body>
+
+        <div class="header">
+            <h1>Assignment 4: High(er) voltage and transistors</h1>
+            <h2>Circuit operation</h2>
+            <p>
+                <img src="a4.gif" width=400>
+            </p>
+
+            <p>
+                This circuit adjusts an LED strip's brightness based off of its read output from an LDR.
+                When the LDR reads low light, it will dim the LED strip, and when it reads high light, it'll brighten.
+            </p>
+
+            <p>
+                <img src="a4circuit.jpeg" width=400>
+            </p>
+
+            <h2>LDR and LED strip schematic</h2>
+            <p>
+            <img src="a4schematic.jpeg" width="400">
+                <pre>
+
+<b>For the LED strip:</b>
+My LED strip is 100 LEDs long, cut from 300 total that use 18 W.
+100 / 300 x 18W = 6W
+The load power supplies 12 V from the wall, and I = P / V, so I = 6W / 12V, therefore <b>I = 0.5 A</b>
+0.5A is less than the max current that the transistor is rated for (0.6A).
+
+I used a 10K Ω resistor between the Arduino and transistor, even though any resistor over 250 Ω would be sufficient, as
+5V / .02A = 250Ω
+                </pre>
+
+                <pre>
+
+<b>For the LDR:</b>
+5V = 200mA x R
+5V / 0.2A = R
+R = <b>25Ω</b>
+                </pre>
+            I chose to use a 10K Ω resistor, as we did in class examples, even though any resistor larger than 25 Ω would have sufficed.
+            </p>
+
+            <p>
+                <h2>Code snippet</h2>
+            <img src="a4code.png" width=400>
+
+            </p>
+        </div>
+
+    </body>
+</html>
