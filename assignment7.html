@@ -21,21 +21,30 @@
             </p>
 
             <p>
-                This circuit reads the potentiometer's values from turning the knob and plots it to an html page. As the potentiometer's knob is turned, the drawn line changes in height. Twisting the knob to the left decreases the height, and to the right increases the height.
+                This circuit reads the x- and y- values from a joystick and draws an ellipse mapped to p5. Through keyboard input, the brightness of an LED can be controlled.
             </p>
 
             <p>
                 <img src="a7circuit.jpeg" width=400>
             </p>
             <p>
-              A0 reads a potentiometer's values, which is connected to 5V and ground from the Arduino.
+              A0 reads the x- values, and A1 reads the y- values from the joystick. An LED is connected to pin 5, which reads from keyboard input.
             </p>
 
             <h2>Schematic</h2>
             <p>
-                <img src="a6schematic.jpeg" width="400">
+                <img src="a7schematic.jpeg" width="400">
             </p>
+<pre>
 
+<b>For blue LEDs:</b>
+3.3V drop, 5V power source, 20 mA
+V = 5-3.3 = 1.7 V
+V = I x R = 1.7 = 0.02 x R
+R = 1.7/0.02 = <b>85 Ω</b>
+
+I chose to use a 1K Ω resistor to limit the current flowing to the LED, much more than the 85 Ω requirement.
+</pre>
             <h2>Code snippet</h2>
             <p>
                 <img src="a7code1.png" width=400>
@@ -43,7 +52,7 @@
             <p>
                 <img src="a7code2.png" width=400>
             </p>
-                        <p>
+            <p>
                 <img src="a7code3.png" width=400>
             </p>
         </div>
