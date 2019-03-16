@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+        <title>Final Project: 4Func</title>
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head>
+    <body>
+
+        <div class="header">
+
+            <h1>4Func</h1>
+
+            <h2>Concept</h2>
+            <p>
+                <img src="4functhumb.jpeg" width=400>
+            </p>
+            <p>
+                4Func serves to be a replacement game of mental math problems, similar to multiplication table exercises given to elementary students and combining it with traditional flash card memorization.
+            </p>
+
+            <h2>4Func circuit and implementation</h2>
+
+            <p>
+                <img src="finalcircuit.jpeg" width=400>
+                <img src="lasercut.jpeg" width=400>
+                <img src="4funcback.jpeg" width=400>
+            </p>
+
+            <p>
+                A laser-cut box houses mini-breadboard, which connects the IR sensor and LCD screen to the Arduino. 
+            </p>
+
+            <h2>Schematic</h2>
+
+            <p>
+                <img src="finalschematic.jpeg" width=400>
+            </p>
+            <p>
+                An LCD screen and IR receiver sensor is conneceted a mini-breadboard and Arduino. A 2K Ω resistor is connected to the "RW" pin on the LCD screen, connected to ground (in lieu of the potentiometer) which resulted with the best viewable brightness. A 330 Ω resistor is connected to the "A" pin on the LCD screen to set backlight level. 
+            </p>
+
+            <h2>Circuit operation</h2>
+
+            <p>
+                <iframe width="800" height="450" src="https://www.youtube.com/embed/LXFb7X-ETbo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </p>
+
+            <h2>Code</h2>
+
+            <p>
+                <img src="4funccode1.png" width=400>
+                <img src="4funccode2.png" width=400>
+            </p>
+
+            <p>
+                Users can control the game's difficulty, which changes the speed of the questions and size of numbers, by selecting 1-5 on an IR remote. Numbers for the questions and their operation are chosen at random. Answers are displayed after a short delay period, which is determined by the difficulty level selected on the remote.
+            </p>
+
+            <p>
+
+            </p>
+
+        </div>
+
+    </body>
+</html>
